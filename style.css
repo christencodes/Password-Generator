@@ -1,0 +1,233 @@
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --generator-background-color: #24232b;
+  --default-font-family: "JetBrains Mono", sans-serif;
+}
+/* ---------------------- */
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  font-family: var(--default-font-family);
+  font-size: 1.3rem;
+}
+
+.generator-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: min(700px, 80%);
+  height: auto;
+  padding: 2.5rem;
+  gap: 32px;
+}
+
+.generated-password-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.9rem;
+  border: 1px solid blue;
+
+  background-color: var(--generator-background-color);
+}
+
+.generated-password-options-container {
+  border: 1px solid purple;
+  padding: 2rem;
+  background-color: var(--generator-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.generated-password-options-container > * {
+  width: 100%;
+}
+
+.slider {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.slider-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider h2 {
+  display: inline;
+}
+
+.password-options {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.password-strength-container {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.password-strength-container h2 {
+  font-size: 1.7rem;
+}
+
+/* .password-strength-container:first-child {
+} */
+
+.password-strength-meter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  /* flex: 1; */
+  flex-wrap: wrap;
+}
+
+.password-strength-meter > * {
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.password-strength-container h2 {
+  text-transform: uppercase;
+}
+button {
+  width: 100%;
+  margin-top: 32px;
+  padding: 0.5rem;
+  font: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button p {
+  display: inline;
+}
+
+/* STYLE INPUTS */
+.strength {
+  border: 3px solid white;
+  min-width: 13px;
+  min-height: 36px;
+  /* flex-shrink: 1; */
+  flex-grow: 0;
+}
+
+.checkbox {
+  border: 1px solid green;
+}
+
+input[type="checkbox"] {
+  accent-color: red;
+}

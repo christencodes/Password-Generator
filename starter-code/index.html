@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <!-- Contianer -->
+    <div class="generator-wrapper">
+      <!-- --------------------------------------------------- -->
+      <div class="generated-password-container">
+        <h2 class="generated-password">P4$5W0rD!</h2>
+        <img src="/assets/images/icon-copy.svg" alt="" />
+      </div>
+
+      <div class="generated-password-options-container">
+        <div class="slider">
+          <div class="slider-information">
+            <label for="">Character Length</label>
+            <h2 class="slider-value">0</h2>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="20"
+            value="10"
+            id="password-slider"
+            oninput="sliderValueChange(this.value)"
+          />
+        </div>
+        <div class="password-options">
+          <label class="container">
+            <input
+              type="checkbox"
+              checked=""
+              oninput="boxChecked(this.checked)"
+            />
+            Include Uppercase Letters
+          </label>
+
+          <label class="container">
+            <input
+              type="checkbox"
+              checked=""
+              oninput="boxChecked(this.checked)"
+            />
+            Include Lowercase Letters
+          </label>
+
+          <label class="container">
+            <input
+              type="checkbox"
+              checked=""
+              oninput="boxChecked(this.checked)"
+            />
+            Include Numbers
+          </label>
+
+          <label class="container">
+            <input
+              type="checkbox"
+              checked=""
+              oninput="boxChecked(this.checked)"
+            />
+            Include Symbols
+          </label>
+        </div>
+        <div>
+          <div class="password-strength-container">
+            <h2>strength</h2>
+            <div class="password-strength-meter">
+              <h2 class="password-strength">medium</h2>
+              <div class="strength strength-1"></div>
+              <div class="strength strength-2"></div>
+              <div class="strength strength-3"></div>
+              <div class="strength strength-4"></div>
+            </div>
+          </div>
+
+          <div class="generate-button">
+            <button>
+              <p>Generate</p>
+              <img src="/assets/images/icon-arrow-right.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
