@@ -125,6 +125,7 @@ function populateCharacters(length) {
     }
   });
 
+  generatedPassword.style.color = "white"; // reset password text colour since it's no longer in the clipboard
   return shuffleString(populatedString);
 }
 

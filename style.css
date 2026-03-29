@@ -167,6 +167,7 @@ input[type="range"] {
   background-image: linear-gradient(to left, rgb(49, 128, 0), var(--green));
   background-repeat: no-repeat;
   background-size: var(--slider-percentage);
+  cursor: pointer;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -175,6 +176,26 @@ input[type="range"]::-webkit-slider-thumb {
   height: 30px;
   background-color: white;
   border-radius: 50%;
+  cursor: grab;
+}
+
+/* cursor grabbing */
+input[type="range"]:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+/* Mozilla Firefox support */
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  cursor: grabbing;
 }
 
 .password-options {
@@ -237,6 +258,8 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
+  
+  cursor: pointer;
 }
 
 button:hover {
@@ -269,11 +292,22 @@ button:hover {
   pointer-events: none;
 }
 
+#clipboard {
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#clipboard:hover {
+  background-color: #19181e;
+}
+
 input[type="checkbox"] {
   width: 30px;
   height: 30px;
   border: 3px solid white;
   appearance: none;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:hover {
